@@ -30,14 +30,14 @@ jobs:
 ### Environment Variables
 | Key             | Value                       | Type   | Required |
 | --------------- | --------------------------- | ------ | -------- |
-| <workflow_name> | workflow name               | String | no       |
-| <storage_name>  | storage name in RCLONE_CONF | String | yes      |
-| <bucket_name>   | storage bucket name         | String | yes      |
+| <workflow_name> | Workflow name               | String | No       |
+| <storage_name>  | Storage name in RCLONE_CONF | String | Yes      |
+| <bucket_name>   | Storage bucket name         | String | Yes      |
 
 ### Secret Variables
 | Key         | Value                            | Type    | Required |
 | ----------- | -------------------------------- | ------- | -------- |
-| RCLONE_CONF | Rclone configuration information | secrets | yes      |
+| RCLONE_CONF | Rclone configuration information | Secrets | Yes      |
 
 ### RCLONE_CONF Example
 `RCLONE_CONF` can be omitted if [CLI arguments](https://rclone.org/flags/#backend-flags) or [environment variables](https://rclone.org/docs/#environment-variables) are supplied. `RCLONE_CONF` can also be encrypted if [`RCLONE_CONFIG_PASS`](https://rclone.org/docs/#configuration-encryption) secret is supplied.
@@ -58,8 +58,8 @@ docker run --rm -e "RCLONE_CONF=$(cat ~/.config/rclone/rclone.conf)" $(docker bu
 ```
 
 ## Author
-[Wei He](https://github.com/wei) _github@weispot.com_
-[wjkbfq (wz)](https://github.com/wjkbfq) _k@kunn.cc_
+- [Wei He](https://github.com/wei) _github@weispot.com_
+- [wjkbfq (wz)](https://github.com/wjkbfq) _k@kunn.cc_
 
 ## License
 [MIT](https://wei.mit-license.org)
