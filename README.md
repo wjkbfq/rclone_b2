@@ -54,7 +54,7 @@ hard_delete = true
 
 ```sh
 docker run --rm -e "RCLONE_CONF=$(cat ~/.config/rclone/rclone.conf)" $(docker build -q .) \
-  copy <source>:<source_path> <dest>:<dest_path>
+  sync --exclude "/{.git,.github}/" ./ <storage_name>:<bucket_name>/
 ```
 
 ## Author
